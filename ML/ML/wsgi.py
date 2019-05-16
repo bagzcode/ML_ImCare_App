@@ -8,9 +8,12 @@ https://docs.djangoproject.com/en/2.2/howto/deployment/wsgi/
 """
 
 import os
+import sys
 
-from django.core.wsgi import get_wsgi_application
-
+#sys.path.append('/var/www/html/django_dir/HibahD/ML/')
+sys.path.append('/var/www/html/django_dir/env/lib/python3.5/site-packages')
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ML.settings')
 
+from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
+
