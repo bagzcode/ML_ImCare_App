@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'MLapp',
+    #'MLapp',
     'api',
 ]
 
@@ -87,7 +87,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'id2733367_imcare',
-        'USER': 'root',
+        'USER': 'iamcare_user',
         'PASSWORD': 'Aa,12345678',
         'HOST': 'localhost',
         #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),

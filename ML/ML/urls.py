@@ -21,7 +21,7 @@ from django.urls import path, include
 #PEMBAWA_RESOURCE = PembawaResource()
 
 urlpatterns = [
-    path('', views.welcome),
+    #path('', views.welcome),
     path('admin/', admin.site.urls),
     #path('ML/', views.hello),
     #path('apitest/', include(PEMBAWA_RESOURCE.urls)),
