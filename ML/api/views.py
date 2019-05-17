@@ -3,6 +3,7 @@
 # Create your views here.
 import os
 import pickle
+import json
 from django.conf import settings
 import numpy as np
 import pandas as pd
@@ -44,11 +45,12 @@ class Predict(views.APIView):
             path = os.path.join(settings.MODEL_ROOT, model_name)
             with open(path, 'rb') as file:
                 model = pickle.load(file)
+            
             try:
                 result = model.predict(pd.DataFrame([entry]))
                 predictions.append(result[0])
 
             except Exception as err:
                 return Response(str(err), status=status.HTTP_400_BAD_REQUEST)
-
+            
         return Response(predictions, status=status.HTTP_200_OK)

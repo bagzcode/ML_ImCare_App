@@ -35,6 +35,7 @@ ALLOWED_HOSTS = [
 
 
 # Application definition
+MODEL_ROOT = os.path.join(BASE_DIR, 'models')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
