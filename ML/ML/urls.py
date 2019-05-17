@@ -23,6 +23,7 @@ PEMBAWA_RESOURCE = PembawaResource()
 urlpatterns = [
     path('', views.welcome),
     path('admin/', admin.site.urls),
-    path('ML/', views.hello),
-    path('api/', include(PEMBAWA_RESOURCE.urls)),
+    #path('ML/', views.hello),
+    #path('apitest/', include(PEMBAWA_RESOURCE.urls)),
+    path('api/', include('api.urls')),
 ]
