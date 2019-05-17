@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from MLapp import views
-from api.resources import PembawaResource
+#from MLapp import views
+#from api.resources import PembawaResource
 
-PEMBAWA_RESOURCE = PembawaResource()
+#PEMBAWA_RESOURCE = PembawaResource()
 
 urlpatterns = [
     path('', views.welcome),
