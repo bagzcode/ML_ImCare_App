@@ -25,12 +25,19 @@ SECRET_KEY = '9o&4qq!r49&+jkpy4n$^s+8zd8n0imeip2+fr)#kd=5&r)t10m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['134.209.103.181','159.65.1.215','gamelabnetwork.com', '.gamelabnetwork.com']
+ALLOWED_HOSTS = [
+    'localhost',
+    '134.209.103.181',
+    '159.65.1.215',
+    'gamelabnetwork.com',
+    '.gamelabnetwork.com'
+    ]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'api',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -77,10 +84,10 @@ WSGI_APPLICATION = 'ML.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-	'NAME': 'id2733367_imcare',
-	'USER': 'iamcare_user',
-	'PASSWORD': 'Aa,12345678',
-	'HOST': 'localhost',
+        'NAME': 'id2733367_imcare',
+        'USER': 'root',
+        'PASSWORD': 'Aa,12345678',
+        'HOST': 'localhost',
         #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }

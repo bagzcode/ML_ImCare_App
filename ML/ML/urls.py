@@ -14,9 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from MLapp import views
+from api.resources import PembawaResource
+
+PEMBAWA_RESOURCE = PembawaResource()
 
 urlpatterns = [
-    path('admin/', admin.site.urls), path('ML/', views.hello, name = 'hello')
+    path('', views.welcome),
+    path('admin/', admin.site.urls),
+    path('ML/', views.hello),
+    path('api/', include(PEMBAWA_RESOURCE.urls)),
 ]
