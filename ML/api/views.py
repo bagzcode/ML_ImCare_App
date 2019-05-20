@@ -67,7 +67,7 @@ class Train(views.APIView):
         path = os.path.join(settings.MODEL_ROOT, model_name)
         with open(path, 'wb') as file:
             pickle.dump(clf, file)
-        return Response(status=status.HTTP_200_OK)
+        return Response("{Modeling sucessfully created}",status=status.HTTP_200_OK)
     
     def get (self, request): 
         try:
