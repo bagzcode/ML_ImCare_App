@@ -19,7 +19,7 @@ from rest_framework import views
 from rest_framework import status
 from rest_framework.response import Response
 
-#data: https://archive.ics.uci.edu/ml/datasets/Heart+Disease
+#data cleveland: https://www.kaggle.com/ronitf/heart-disease-uci#heart.csv
 
 class Train(views.APIView):
     """ class train """
