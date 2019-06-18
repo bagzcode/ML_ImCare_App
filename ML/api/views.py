@@ -45,6 +45,10 @@ class Train(views.APIView):
             dt_source = pd.read_csv("./models/data_mayapada.csv")#target to mayapada data
             feature_names = list(dt_source)[0:dt_source.shape[1]-2]
             target_names = ["Normal","Level 1","Level 2","Level 3"]
+        elif data_source == "new_mayapada":
+            dt_source = pd.read_csv("./models/mayapada.csv")#target to mayapada data
+            feature_names = list(dt_source)[0:dt_source.shape[1]-2]
+            target_names = ["sehat","tidak sehat"]
         
         mapping = dict(zip(np.unique(target_data), target_names))
         x_train = pd.DataFrame(dt_source, columns=feature_names)
