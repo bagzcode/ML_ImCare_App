@@ -28,7 +28,7 @@ class Train(views.APIView):
         model_name = request.data.pop('model_name')
         classifier = request.data.pop('classifier')
         data_source = request.data.pop('data_source')
-        print(classifier)
+        print(data_source)
         #import the data source
         if data_source == "iris":
             dt_src = datasets.load_iris()
@@ -51,9 +51,10 @@ class Train(views.APIView):
             feature_names = list(dt_source)[0:dt_source.shape[1]-1]
             target_names = ["sehat","tidak sehat"]
             target_data = dt_source['ket'].values
-        
+        print(feature_names)
         mapping = dict(zip(np.unique(target_data), target_names))
-        x_train = pd.DataFrame(dt_source, columns=feature_names)
+        x_train = pd.DataFrame(dt_source, columns=feature_names).fillna(-1)
+        #print(x_train)
         y_train = pd.DataFrame(target_data).replace(mapping)
         try:
             
