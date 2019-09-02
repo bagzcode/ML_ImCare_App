@@ -121,7 +121,7 @@ class Predict(views.APIView):
     
     def get (self, request): 
         try:
-            FormatForm = [
+            """FormatForm = [
 	        {
 		        "model_name": "model_1",
 		        "sepal length (cm)": 5.1,
@@ -135,8 +135,45 @@ class Predict(views.APIView):
 		        "sepal width (cm)": 1.5,
 		        "petal length (cm)": 4.4,
 		        "petal width (cm)": 0.6
-	    }
-]
+	        }
+            ]"""
+            FormatForm = [
+	            {
+	                "model_name":"model_mayapada13_XGB",
+	                "Age":10, 
+	                "CHOL":-1, 
+	                "CL":100, 
+	                "CREA":-1, 
+	                "HDL":-1, 
+	                "K":4.0, 
+	                "Sex":1, 
+	                "SGOT":-1, 
+	                "SGPT":-1, 
+	                "TRIG":-1, 
+	                "UA":-1, 
+	                "UREA":-1, 
+	                "X33":138
+	            },
+                {
+	                "model_name":"model_mayapada13_XGB",
+	                "Age":6, 
+	                "CHOL":-1, 
+	                "CL":-1, 
+	                "CREA":-1, 
+	                "HDL":-1, 
+	                "K":-1, 
+	                "Sex":0, 
+	                "SGOT":-1, 
+	                "SGPT":-1, 
+	                "TRIG":-1, 
+	                "UA":-1, 
+	                "UREA":-1, 
+	                "X33":-1
+	            },
+            ]
+
+            ]
+
         except Exception as err:
             return Response(str(err), status=status.HTTP_400_BAD_REQUEST)
             
