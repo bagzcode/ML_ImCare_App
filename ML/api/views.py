@@ -51,11 +51,6 @@ class Train(views.APIView):
             feature_names = list(dt_source)[0:dt_source.shape[1]-1]
             target_names = ["sehat","tidak sehat"]
             target_data = dt_source['ket'].values
-        elif data_source == "new_mayapada":
-            dt_source = pd.read_csv("./models/mayapada.csv")#target to new_mayapada data
-            feature_names = list(dt_source)[0:dt_source.shape[1]-1]
-            target_names = ["sehat","tidak sehat"]
-            target_data = dt_source['ket'].value
         elif data_source == "mayapada13":
             dt_source = pd.read_csv("./models/Mayapada13.csv")#target to mayapada_13 data
             feature_names = list(dt_source)[0:dt_source.shape[1]-1]
