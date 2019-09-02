@@ -169,9 +169,7 @@ class Predict(views.APIView):
 	                "UA":-1, 
 	                "UREA":-1, 
 	                "X33":-1
-	            },
-            ]
-
+	            }
             ]
 
         except Exception as err:
