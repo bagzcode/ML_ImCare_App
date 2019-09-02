@@ -157,7 +157,7 @@ class Predict(views.APIView):
                 {
 	                "model_name":"model_mayapada13_XGB",
 	                "Age":6, 
-	                "CHOL":-1, 
+	                "CHOL":400, 
 	                "CL":-1, 
 	                "CREA":-1, 
 	                "HDL":-1, 
