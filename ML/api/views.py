@@ -56,11 +56,13 @@ class Train(views.APIView):
             feature_names = list(dt_source)[0:dt_source.shape[1]-1]
             target_names = ["tidak sehat","sehat"]
             target_data = dt_source['ket'].values
-        print(feature_names)
+        
         mapping = dict(zip(np.unique(target_data), target_names))
+        print(feature_names)
         x_train = pd.DataFrame(dt_source, columns=feature_names).fillna(-1)
         #print(x_train)
         y_train = pd.DataFrame(target_data).replace(mapping)
+        #print(y_train)
         try:
             
             if classifier == "RandomForestClassifier":
@@ -108,6 +110,7 @@ class Predict(views.APIView):
                 model = pickle.load(file)
             
             try:
+                print([entry])
                 result = model.predict(pd.DataFrame([entry]))
                 predictions.append(result[0])
 
