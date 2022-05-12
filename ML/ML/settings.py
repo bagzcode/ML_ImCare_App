@@ -87,8 +87,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'id2733367_imcare',
-        'USER': 'iamcare_user',
-        'PASSWORD': 'Aa,12345678',
+        'USER': 'dbadmin',#'iamcare_user',
+        'PASSWORD': 'Test,123',#'Aa,12345678',
         'HOST': 'localhost',
         #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
